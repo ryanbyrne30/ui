@@ -1,0 +1,108 @@
+:root {
+    --felt-color: rgb(63, 63, 63);
+    --felt-text-color: rgb(240, 240, 240);
+    --felt-icon-color: rgb(182, 182, 182);
+    --felt-text-shadow: rgb(51, 51, 51);
+    --felt-text-shadow-highlight: rgb(150, 150, 150);
+    --felt-image-shadow: rgb(59, 59, 59);
+    --felt-image-shadow-highlight: rgb(199, 199, 199);
+    --felt-text-accent-color: rgb(221, 184, 61);
+
+    --texture-felt: url("https://www.transparenttextures.com/patterns/felt.png");
+    --texture-jeans: url("https://www.transparenttextures.com/patterns/grey-jean.png");
+    --texture-45deg-fabric: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    --texture-concrete: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    --texture-cardboard: url("https://www.transparenttextures.com/patterns/cardboard.png");
+    --texture-paper: url("https://www.transparenttextures.com/patterns/paper.png");
+    --texture-rubber: url("https://www.transparenttextures.com/patterns/rubber-grip.png");
+    --texture-bark: url("https://www.transparenttextures.com/patterns/shley-tree-1.png");
+    --texture: var(--texture-felt);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#fbfaff, #b1a1f1)
+}
+
+
+svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    stroke: var(--felt-icon-color);
+    filter: drop-shadow(-1px -1px 1px var(--felt-text-shadow)) drop-shadow(1px 1px 1px var(--felt-text-shadow-highlight));
+    cursor: pointer;
+}
+
+.felt-card {
+    background-color: var(--felt-color);
+    color: var(--felt-text-color);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 20rem;
+    background-image: var(--texture);
+    text-shadow: -1px -1px 1px var(--felt-text-shadow), 1px 1px 1px var(--felt-text-shadow-highlight);
+    font-weight: 500;
+    filter:
+        drop-shadow(1px 1px 0px var(--felt-image-shadow)) drop-shadow(-1px -1px 0px var(--felt-image-shadow-highlight)) drop-shadow(4px 4px 4px var(--felt-image-shadow));
+
+}
+
+.felt-card header {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.felt-card hr {
+    height: 2px;
+    background-color: var(--felt-icon-color);
+    box-shadow: 0 -0.75px 0px var(--felt-text-shadow) 0 0.75px 0px var(--felt-text-shadow-highlight);
+}
+
+.felt-card section {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.felt-card section strong {
+    color: var(--felt-text-accent-color);
+}
+
+.felt-card .title {
+    font-size: 1.15rem;
+    padding: 0;
+    margin: 0;
+}
+
+#emblem {
+    margin: auto;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+    filter:
+        drop-shadow(1px 1px 0px var(--felt-image-shadow)) drop-shadow(-1px -1px 0px var(--felt-image-shadow-highlight)) drop-shadow(4px 4px 4px var(--felt-image-shadow));
+}
+
+#emblem:hover {
+    scale: 1.05;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
